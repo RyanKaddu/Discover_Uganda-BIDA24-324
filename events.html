@@ -1,0 +1,189 @@
+ <!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Discover Uganda - The Pearl of Africa</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="style.css" rel="stylesheet"/>
+<style>
+</style>
+</head>
+<body class="font-sans bg-gray-50">
+<!-- Header/Navigation -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<div class="flex items-center cursor-pointer" onclick="showPage('home')">
+<img alt="Uganda Logo" class="h-10 mr-3" src="Img/logo.png"/>
+<h1 class="text-xl font-bold text-green-800">DISCOVER UGANDA</h1>
+</div>
+<nav class="hidden md:flex space-x-2">
+<a class="nav-tab text-green-700 hover:text-green-600 font-medium active" href="index.html" onclick="showPage('home')">Home</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="about.html" onclick="showPage('about')">About Uganda</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="destinations.html" onclick="showPage('destinations')">Destinations</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="plan-trip.html" onclick="showPage('plan')">Plan Your Trip</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="events.html" onclick="showPage('events')">Events</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="blog.html" onclick="showPage('blog')">Blog</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="contact.html" onclick="showPage('contact')">Contact</a>
+</nav>
+<button class="md:hidden text-gray-600" id="mobile-menu-button">
+<i class="fas fa-bars text-2xl"></i>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg" id="mobile-menu">
+<div class="flex flex-col space-y-4">
+<a class="text-green-700 hover:text-green-600 font-medium" href="index.html" onclick="showPage('home')">Home</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="about.html" onclick="showPage('about')">About Uganda</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="destinations.html" onclick="showPage('destinations')">Destinations</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="plan-trip.html" onclick="showPage('plan')">Plan Your Trip</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="events.html" onclick="showPage('events')">Events</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="blog.html" onclick="showPage('blog')">Blog</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="contact.html" onclick="showPage('contact')">Contact</a>
+</div>
+</div>
+</header>
+<body>
+<!-- Hero Section -->
+<section class="relative h-96 flex items-center justify-center text-white parallax" style="background-image: url('/Img/kampala-city-night.jpg');">
+<div class="absolute inset-0 bg-black bg-opacity-50"></div>
+<div class="relative z-10 text-center px-4">
+<h1 class="text-4xl md:text-5xl font-bold mb-4">Events &amp; Festivals in Uganda</h1>
+<p class="text-xl mb-8">Experience Uganda's vibrant culture through these annual events and festivals</p>
+</div>
+</section>
+<!-- Events Page -->
+<div class="page block" id="events">
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<!-- Events Filter -->
+<section class="py-8 bg-green-50">
+<div class="container mx-auto px-4">
+<div class="flex flex-wrap justify-center gap-3">
+<button class="filter-btn px-4 py-2 rounded-full border border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition" data-filter="all">
+                        All Events
+                    </button>
+<button class="filter-btn px-4 py-2 rounded-full border border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition" data-filter="music">
+                        Music Festivals
+                    </button>
+<button class="filter-btn px-4 py-2 rounded-full border border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition" data-filter="cultural">
+                        Cultural Events
+                    </button>
+<button class="filter-btn px-4 py-2 rounded-full border border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition" data-filter="arts">
+                        Arts &amp; Theater
+                    </button>
+<button class="filter-btn px-4 py-2 rounded-full border border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition" data-filter="food">
+                        Food &amp; Drink
+                    </button>
+</div>
+</div>
+</section>
+<section class="py-12 bg-white">
+<div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="event-list">
+<div class="event-card p-6 border rounded-lg shadow-md" data-category="music">
+<h3 class="text-xl font-bold text-green-800">Nyege Nyege Festival</h3>
+<p class="text-gray-600">Jinja – September 5–8</p>
+</div>
+<div class="event-card p-6 border rounded-lg shadow-md" data-category="cultural">
+<h3 class="text-xl font-bold text-green-800">Imbalu Circumcision Ceremony</h3>
+<p class="text-gray-600">Mbale – August</p>
+</div>
+<div class="event-card p-6 border rounded-lg shadow-md" data-category="arts">
+<h3 class="text-xl font-bold text-green-800">Bayimba Arts Festival</h3>
+<p class="text-gray-600">Kampala – July</p>
+</div>
+<div class="event-card p-6 border rounded-lg shadow-md" data-category="food">
+<h3 class="text-xl font-bold text-green-800">Uganda Food Expo</h3>
+<p class="text-gray-600">Kampala – October</p>
+</div>
+</div>
+</section>
+<script>
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                    const filter = btn.getAttribute('data-filter');
+                    const cards = document.querySelectorAll('.event-card');
+
+                    cards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+
+                        if (filter === 'all' || filter === category) {
+                        card.classList.remove('hidden');
+                        } else {
+                        card.classList.add('hidden');
+                        }
+                    });
+                    });
+                });
+                </script>
+<!-- Event Info -->
+<section>
+<div class="mb-16">
+<h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Cultural Festivals</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Nyege Nyege -->
+<div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+<img alt="Nyege Nyege Festival" class="w-full h-48 object-cover" src="Img/nyege-nyege-festival.jpg"/>
+<div class="p-6">
+<div class="flex justify-between items-start mb-3">
+<span class="text-green-600 font-medium">September</span>
+<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Music</span>
+</div>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Nyege Nyege Festival</h3>
+<p class="text-gray-600 mb-4">East Africa's biggest music festival featuring international and local artists across multiple genres.</p>
+<div class="flex justify-between items-center">
+<span class="text-gray-500 text-sm">Jinja, Uganda</span>
+<a class="text-green-600 font-medium hover:underline" href="#">Learn More →</a>
+</div>
+</div>
+</div>
+<!-- Bayimba -->
+<div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+<img alt="Bayimba Festival" class="w-full h-48 object-cover" src="Img/bayimba-international-festival.jpg"/>
+<div class="p-6">
+<div class="flex justify-between items-start mb-3">
+<span class="text-green-600 font-medium">August</span>
+<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Arts</span>
+</div>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Bayimba International Festival</h3>
+<p class="text-gray-600 mb-4">Celebration of contemporary arts including music, dance, theater, film, and visual arts.</p>
+<div class="flex justify-between items-center">
+<span class="text-gray-500 text-sm">Kampala, Uganda</span>
+<a class="text-green-600 font-medium hover:underline" href="#">Learn More →</a>
+</div>
+</div>
+</div>
+<!-- Kampala City -->
+<div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+<img alt="Kampala City" class="w-full h-48 object-cover" src="/Img/kampala-city-exploration.jpg"/>
+<div class="p-6">
+<div class="flex justify-between items-start mb-3">
+<span class="text-green-600 font-medium">Year-round</span>
+<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Cities</span>
+</div>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Kampala City Exploration</h3>
+<p class="text-gray-600 mb-4">Discover Uganda’s vibrant capital through city tours, cultural landmarks, nightlife, and local cuisine.</p>
+<div class="flex justify-between items-center">
+<span class="text-gray-500 text-sm">Kampala, Uganda</span>
+<a class="text-green-600 font-medium hover:underline" href="#">Learn More →</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+</section></div></body> 
+<script>
+  var menuBtn = document.getElementById('mobile-menu-button');
+  var mobileMenu = document.getElementById('mobile-menu');
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>
+</body>
+</html>
