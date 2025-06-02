@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Discover Uganda - The Pearl of Africa</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="style.css" rel="stylesheet"/>
+<style>
+</style>
+</head>
+<body class="font-sans bg-gray-50">
+<!-- Header/Navigation -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<div class="flex items-center cursor-pointer" onclick="showPage('home')">
+<img alt="Uganda Logo" class="h-10 mr-3" src="Img/logo.png"/>
+<h1 class="text-xl font-bold text-green-800">DISCOVER UGANDA</h1>
+</div>
+<nav class="hidden md:flex space-x-2">
+<a class="nav-tab text-green-700 hover:text-green-600 font-medium active" href="index.html" onclick="showPage('home')">Home</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="about.html" onclick="showPage('about')">About Uganda</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="destinations.html" onclick="showPage('destinations')">Destinations</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="plan-trip.html" onclick="showPage('plan')">Plan Your Trip</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="events.html" onclick="showPage('events')">Events</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="blog.html" onclick="showPage('blog')">Blog</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="contact.html" onclick="showPage('contact')">Contact</a>
+</nav>
+<button class="md:hidden text-gray-600" id="mobile-menu-button">
+<i class="fas fa-bars text-2xl"></i>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg" id="mobile-menu">
+<div class="flex flex-col space-y-4">
+<a class="text-green-700 hover:text-green-600 font-medium" href="index.html" onclick="showPage('home')">Home</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="about.html" onclick="showPage('about')">About Uganda</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="destinations.html" onclick="showPage('destinations')">Destinations</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="plan-trip.html" onclick="showPage('plan')">Plan Your Trip</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="events.html" onclick="showPage('events')">Events</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="blog.html" onclick="showPage('blog')">Blog</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="contact.html" onclick="showPage('contact')">Contact</a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-96 flex items-center justify-center text-white parallax" style="background-image: url('/Img/kampala-city-night.jpg');">
+<div class="absolute inset-0 bg-black bg-opacity-50"></div>
+<div class="relative z-10 text-center px-4">
+<h1 class="text-4xl md:text-5xl font-bold mb-4">From Our Blog</h1>
+<p class="text-xl mb-8">Travel tips, destination highlights, and insider knowledge to help you plan your Ugandan adventure</p>
+</div>
+</section>
+<!-- Blog Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Blog Post 1 -->
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl">
+<img alt="Gorilla Trekking" class="w-full h-48 object-cover" src="Img/gorilla-trekking.jpg"/>
+<div class="p-6">
+<span class="text-green-600 text-sm font-medium">Wildlife</span>
+<h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Gorilla Trekking: A Life-Changing Experience</h3>
+<p class="text-gray-600 text-sm mb-4">What to expect when trekking mountain gorillas in Uganda's rainforests.</p>
+<div class="flex items-center text-sm text-gray-500">
+<span>June 15, 2025</span>
+<span class="mx-2">•</span>
+<span>5 min read</span>
+</div>
+</div>
+</div>
+<!-- Blog Post 2 -->
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl">
+<img alt="Ugandan Food" class="w-full h-48 object-cover" src="Img/food.jpg"/>
+<div class="p-6">
+<span class="text-green-600 text-sm font-medium">Food &amp; Drink</span>
+<h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">A Guide to Ugandan Cuisine</h3>
+<p class="text-gray-600 text-sm mb-4">Must-try dishes and where to find the best local food in Uganda.</p>
+<div class="flex items-center text-sm text-gray-500">
+<span>May 28, 2025</span>
+<span class="mx-2">•</span>
+<span>4 min read</span>
+</div>
+</div>
+</div>
+<!-- Blog Post 3 -->
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl">
+<img alt="Kampala" class="w-full h-48 object-cover" src="Img/kampala-busy.jpg"/>
+<div class="p-6">
+<span class="text-green-600 text-sm font-medium">Cities</span>
+<h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">24 Hours in Kampala: The Ultimate Itinerary</h3>
+<p class="text-gray-600 text-sm mb-4">How to make the most of a short stay in Uganda's vibrant capital.</p>
+<div class="flex items-center text-sm text-gray-500">
+<span>April 12, 2023</span>
+<span class="mx-2">•</span>
+<span>6 min read</span>
+</div>
+</div>
+</div>
+<!-- Blog Post 4 -->
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl">
+<img alt="Bird Watching" class="w-full h-48 object-cover" src="Img/bird-watching.jpg"/>
+<div class="p-6">
+<span class="text-green-600 text-sm font-medium">Wildlife</span>
+<h3 class="text-xl font-bold text-gray-800 mb-2 mt-1">Uganda: A Birder's Paradise</h3>
+<p class="text-gray-600 text-sm mb-4">With over 1,000 bird species, Uganda offers incredible birdwatching opportunities.</p>
+<div class="flex items-center text-sm text-gray-500">
+<span>March 30, 2023</span>
+<span class="mx-2">•</span>
+<span>7 min read</span>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<a class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105" href="https://www.dookinternational.com/uganda-tourist-attractions">
+                        View All Blog Posts
+                    </a>
+</div>
+</div>
+</section>
+<!-- Travel Guide Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-green-800 mb-4">Your Travel Guide to Uganda</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Discover essential tips, destinations, and experiences through this short video guide to help plan your Ugandan adventure.</p>
+</div>
+<!-- Video Embed -->
+<div class="relative overflow-hidden max-w-4xl mx-auto rounded-lg shadow-lg" style="padding-top: 56.25%;">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="absolute top-0 left-0 w-full h-full rounded-lg" frameborder="0" src="https://www.youtube.com/embed/BDPkhnM6NDc" title="Uganda Travel Guide">
+</iframe>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-16 bg-green-50">
+<div class="container mx-auto px-4">
+<div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8 md:p-12">
+<div class="text-center">
+<h2 class="text-2xl font-bold text-green-800 mb-4">Stay Updated on Uganda Travel</h2>
+<p class="text-gray-600 mb-6">Subscribe to our newsletter for the latest travel tips, special offers, and destination highlights.</p>
+</div>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-grow px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Your email address" type="email"/>
+<button class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300" type="submit">
+                            Subscribe
+                        </button>
+</form>
+<p class="text-sm text-gray-500 mt-4 text-center">We respect your privacy. Unsubscribe at any time.</p>
+</div>
+</div>
+</section>
+
+<body>
+<!-- About Uganda Page -->
+<div class="page" id="about">
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h1 class="text-4xl font-bold text-green-800 mb-4">About Uganda</h1>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">Discover the rich history, diverse culture, and stunning natural beauty of the Pearl of Africa</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-12 mb-16">
+<div class="lg:w-1/2">
+<h2 class="text-3xl font-bold text-green-800 mb-6">The Pearl of Africa</h2>
+<p class="text-gray-600 mb-4">Uganda, often referred to as the "Pearl of Africa" by Winston Churchill, is a landlocked country in East Africa known for its stunning landscapes, diverse wildlife, and warm, welcoming people.</p>
+<p class="text-gray-600 mb-4">With a population of over 45 million people from more than 56 indigenous communities, Uganda is a melting pot of cultures, languages, and traditions.</p>
+<p class="text-gray-600 mb-6">The country is blessed with an abundance of natural wonders, including the source of the Nile River, snow-capped mountains, vast lakes, and dense rainforests that are home to half of the world's remaining mountain gorillas.</p>
+<button class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Learn More About Our Culture
+                        </button>
+</div>
+<div class="lg:w-1/2">
+<img alt="Ugandan Culture" class="w-full h-auto rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1374&amp;q=80"/>
+</div>
+</div>
+<!-- Testimonials -->
+<section class="py-16 px-4 bg-white">
+<div class="container mx-auto max-w-6xl">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Traveler Experiences</h2>
+<div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="testimonial-card bg-gray-50 p-8 rounded-lg">
+<div class="flex items-center mb-4">
+<img alt="Sarah" class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/44.jpg"/>
+<div>
+<h4 class="font-bold">Sarah Johnson</h4>
+<div class="flex text-yellow-400">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-700 italic">"Gorilla trekking in Bwindi was the most incredible experience of my life. Coming face-to-face with these gentle giants in their natural habitat was truly humbling."</p>
+</div>
+<div class="testimonial-card bg-gray-50 p-8 rounded-lg">
+<div class="flex items-center mb-4">
+<img alt="Michael" class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/32.jpg"/>
+<div>
+<h4 class="font-bold">Michael Chen</h4>
+<div class="flex text-yellow-400">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star-half-alt"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-700 italic">"The people of Uganda made our trip unforgettable. Their warmth and hospitality, combined with the stunning landscapes, created memories we'll cherish forever."</p>
+</div>
+<div class="testimonial-card bg-gray-50 p-8 rounded-lg">
+<div class="flex items-center mb-4">
+<img alt="Amina" class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/68.jpg"/>
+<div>
+<h4 class="font-bold">Amina Diallo</h4>
+<div class="flex text-yellow-400">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-700 italic">"White-water rafting on the Nile was the ultimate adrenaline rush! Uganda offers the perfect mix of adventure and cultural experiences."</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="bg-green-50 rounded-xl p-8 mb-16">
+<h2 class="text-3xl font-bold text-green-800 mb-6 text-center">Quick Facts</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white p-6 rounded-lg shadow-sm text-center">
+<div class="text-green-600 text-3xl mb-3">
+<i class="fas fa-globe-africa"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Location</h3>
+<p class="text-gray-600">East Africa, bordered by Kenya, South Sudan, DR Congo, Rwanda, and Tanzania</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm text-center">
+<div class="text-green-600 text-3xl mb-3">
+<i class="fas fa-mountain"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Geography</h3>
+<p class="text-gray-600">Diverse landscapes from savannahs to mountains, lakes, and rainforests</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm text-center">
+<div class="text-green-600 text-3xl mb-3">
+<i class="fas fa-language"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Languages</h3>
+<p class="text-gray-600">English (official), Swahili, Luganda, and over 50 local languages</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm text-center">
+<div class="text-green-600 text-3xl mb-3">
+<i class="fas fa-umbrella-beach"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Climate</h3>
+<p class="text-gray-600">Tropical climate with average temperatures of 25-29°C (77-84°F)</p>
+</div>
+</div>
+</div>
+<div class="mb-16">
+<h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Cultural Heritage</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<h3 class="text-xl font-bold text-gray-800 mb-4">Traditional Dances</h3>
+</div></div></div></section>
+
+</div></section></div></body> 
+<script>
+  var menuBtn = document.getElementById('mobile-menu-button');
+  var mobileMenu = document.getElementById('mobile-menu');
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>
+</body>
+</html>
