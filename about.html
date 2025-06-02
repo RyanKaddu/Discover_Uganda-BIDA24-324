@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Discover Uganda - The Pearl of Africa</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="style.css" rel="stylesheet"/>
+<style>
+</style>
+</head>
+<body class="font-sans bg-gray-50">
+<!-- Header/Navigation -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<div class="flex items-center cursor-pointer" onclick="showPage('home')">
+<img alt="Uganda Logo" class="h-10 mr-3" src="Img/logo.png"/>
+<h1 class="text-xl font-bold text-green-800">DISCOVER UGANDA</h1>
+</div>
+<nav class="hidden md:flex space-x-2">
+<a class="nav-tab text-green-700 hover:text-green-600 font-medium active" href="index.html" onclick="showPage('home')">Home</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="about.html" onclick="showPage('about')">About Uganda</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="destinations.html" onclick="showPage('destinations')">Destinations</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="plan-trip.html" onclick="showPage('plan')">Plan Your Trip</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="events.html" onclick="showPage('events')">Events</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="blog.html" onclick="showPage('blog')">Blog</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="contact.html" onclick="showPage('contact')">Contact</a>
+</nav>
+<button class="md:hidden text-gray-600" id="mobile-menu-button">
+<i class="fas fa-bars text-2xl"></i>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg" id="mobile-menu">
+<div class="flex flex-col space-y-4">
+<a class="text-green-700 hover:text-green-600 font-medium" href="index.html" onclick="showPage('home')">Home</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="about.html" onclick="showPage('about')">About Uganda</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="destinations.html" onclick="showPage('destinations')">Destinations</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="plan-trip.html" onclick="showPage('plan')">Plan Your Trip</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="events.html" onclick="showPage('events')">Events</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="blog.html" onclick="showPage('blog')">Blog</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="contact.html" onclick="showPage('contact')">Contact</a>
+</div>
+</div>
+</header>
+<!-- About Uganda Section -->
+<section class="parallax py-32 px-4 text-center text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Img/kampala-city-night.jpg');">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Discover Uganda's Hidden Gems</h2>
+<p class="text-xl mb-8">Beyond the famous attractions, Uganda is full of hidden treasures waiting to be explored by curious travelers.</p>
+</div>
+</section>
+<!-- About Uganda Page -->
+<section class="py-16 px-4 bg-white" id="explore">
+<div class="container mx-auto max-w-6xl">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Why Uganda?</h2>
+<div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
+</div>
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h3 class="text-2xl font-bold text-green-700 mb-4">The Pearl of Africa</h3>
+<p class="text-gray-700 mb-6">Uganda, often called "The Pearl of Africa" by Winston Churchill, is a landlocked country in East Africa known for its stunning landscapes, diverse wildlife, and warm hospitality. From the snow-capped Rwenzori Mountains to the vast Lake Victoria and the mighty Nile River, Uganda offers unparalleled natural beauty.</p>
+<p class="text-gray-700 mb-6">Home to half of the world's remaining mountain gorillas, Uganda provides unique opportunities for wildlife encounters. The country's rich cultural tapestry includes over 50 indigenous languages and vibrant traditions that continue to thrive.</p>
+<div class="flex space-x-4">
+<div class="bg-green-100 p-4 rounded-lg text-center flex-1">
+<i class="fas fa-mountain text-3xl text-green-700 mb-2"></i>
+<p class="font-bold text-green-800">10 National Parks</p>
+</div>
+<div class="bg-yellow-100 p-4 rounded-lg text-center flex-1">
+<i class="fas fa-water text-3xl text-yellow-700 mb-2"></i>
+<p class="font-bold text-yellow-800">25% Water Coverage</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<img alt="Uganda landscape" class="rounded-lg shadow-xl w-full h-auto" src="Img/gift.jpg"/>
+<div class="absolute -bottom-6 -right-6 bg-yellow-500 text-green-900 p-4 rounded-lg shadow-lg hidden md:block">
+<p class="font-bold">"Gifted by Nature"</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-16 px-4 bg-gray-100">
+<div class="container mx-auto max-w-6xl">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">What Makes Uganda Special</h2>
+<div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="feature-card bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl transition duration-300">
+<div class="bg-green-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
+<i class="fas fa-paw text-3xl text-green-700"></i>
+</div>
+<h3 class="text-xl font-bold text-green-800 mb-4">Wildlife</h3>
+<p class="text-gray-700">Home to mountain gorillas, chimpanzees, the Big Five, and over 1,000 bird species, Uganda offers exceptional wildlife viewing opportunities.</p>
+</div>
+<div class="feature-card bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl transition duration-300">
+<div class="bg-yellow-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
+<i class="fas fa-landmark text-3xl text-yellow-700"></i>
+</div>
+<h3 class="text-xl font-bold text-green-800 mb-4">Culture</h3>
+<p class="text-gray-700">With over 50 indigenous tribes, Uganda boasts a rich cultural heritage expressed through music, dance, art, and traditional ceremonies.</p>
+</div>
+<div class="feature-card bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl transition duration-300">
+<div class="bg-green-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
+<i class="fas fa-hiking text-3xl text-green-700"></i>
+</div>
+<h3 class="text-xl font-bold text-green-800 mb-4">Adventure</h3>
+<p class="text-gray-700">From white-water rafting on the Nile to hiking volcanic mountains and trekking through jungles, Uganda is an adventurer's paradise.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Facts Section -->
+<section class="py-16 px-4 bg-green-800 text-white">
+<div class="container mx-auto max-w-6xl">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Uganda At a Glance</h2>
+<div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
+</div>
+<div class="grid md:grid-cols-4 gap-8 text-center">
+<div>
+<div class="text-4xl font-bold mb-2 text-yellow-400">241,551</div>
+<p class="text-gray-300">Square Kilometers</p>
+</div>
+<div>
+<div class="text-4xl font-bold mb-2 text-yellow-400">45+</div>
+<p class="text-gray-300">Indigenous Languages</p>
+</div>
+<div>
+<div class="text-4xl font-bold mb-2 text-yellow-400">1,067</div>
+<p class="text-gray-300">Bird Species</p>
+</div>
+<div>
+<div class="text-4xl font-bold mb-2 text-yellow-400">10</div>
+<p class="text-gray-300">National Parks</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="mb-16">
+<h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Cultural Heritage</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<h3 class="text-xl font-bold text-gray-800 mb-4">Traditional Dances</h3>
+<img alt="Ugandan Dance" class="w-full h-48 object-cover rounded-lg mb-4" src="/Img/ug-dance.jpg"/>
+<p class="text-gray-600">Uganda boasts a rich variety of traditional dances, each with its own significance. The energetic Kiganda dance from the Buganda kingdom, the graceful Runyege from the Banyoro, and the dramatic Larakaraka from the Acholi are just a few examples.</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<h3 class="text-xl font-bold text-gray-800 mb-4">Crafts and Art</h3>
+<img alt="Ugandan Crafts" class="w-full h-48 object-cover rounded-lg mb-4" src="Img/art-and-craft.jpg"/>
+<p class="text-gray-600">Ugandan artisans create beautiful handicrafts including bark cloth from the Buganda kingdom, colorful woven baskets, intricate beadwork, and wooden carvings. These crafts often tell stories or serve practical purposes in traditional societies.</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<h3 class="text-xl font-bold text-gray-800 mb-4">Music</h3>
+<img alt="Ugandan Music" class="w-full h-48 object-cover rounded-lg mb-4" src="Img/instrument.jpg"/>
+<p class="text-gray-600">Traditional Ugandan music features instruments like the adungu (harp), endingidi (tube fiddle), and various drums. Modern Ugandan music blends these traditional elements with contemporary styles, creating a vibrant music scene.</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<h3 class="text-xl font-bold text-gray-800 mb-4">Cuisine</h3>
+<img alt="Ugandan Food" class="w-full h-48 object-cover rounded-lg mb-4" src="Img/foods.jpg"/>
+<p class="text-gray-600">Ugandan cuisine is diverse and flavorful. Staple foods include matooke (steamed green bananas), posho (maize flour), cassava, and sweet potatoes. Popular dishes include luwombo (steamed meat or fish in banana leaves) and rolex (a chapati rolled with eggs and vegetables).</p>
+</div>
+</div>
+</div>
+<div class="bg-green-800 text-white rounded-xl p-8 md:p-12">
+<div class="flex flex-col lg:flex-row items-center gap-8">
+<div class="lg:w-1/2">
+<h2 class="text-3xl font-bold mb-6">Experience Uganda's Culture Firsthand</h2>
+<p class="text-lg mb-6">Join one of our cultural tours to interact with local communities, participate in traditional ceremonies, and learn about Uganda's rich heritage from the people who keep these traditions alive.</p>
+<button class="bg-white hover:bg-gray-100 text-green-800 font-bold py-3 px-6 rounded-lg transition duration-300">
+                                Book a Cultural Tour
+                            </button>
+</div>
+<div class="lg:w-1/2">
+<img alt="Cultural Experience" class="w-full h-auto rounded-lg shadow-lg" src="Img/meeting.jpg"/>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+  var menuBtn = document.getElementById('mobile-menu-button');
+  var mobileMenu = document.getElementById('mobile-menu');
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>
+</body>
+</html>
