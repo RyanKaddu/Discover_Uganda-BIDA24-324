@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Discover Uganda - The Pearl of Africa</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="style.css" rel="stylesheet"/>
+<style>
+</style>
+</head>
+<body class="font-sans bg-gray-50">
+<!-- Header/Navigation -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<div class="flex items-center cursor-pointer" onclick="showPage('home')">
+<img alt="Uganda Logo" class="h-10 mr-3" src="Img/logo.png"/>
+<h1 class="text-xl font-bold text-green-800">DISCOVER UGANDA</h1>
+</div>
+<nav class="hidden md:flex space-x-2">
+<a class="nav-tab text-green-700 hover:text-green-600 font-medium active" href="index.html" onclick="showPage('home')">Home</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="about.html" onclick="showPage('about')">About Uganda</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="destinations.html" onclick="showPage('destinations')">Destinations</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="plan-trip.html" onclick="showPage('plan')">Plan Your Trip</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="events.html" onclick="showPage('events')">Events</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="blog.html" onclick="showPage('blog')">Blog</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="contact.html" onclick="showPage('contact')">Contact</a>
+</nav>
+<button class="md:hidden text-gray-600" id="mobile-menu-button">
+<i class="fas fa-bars text-2xl"></i>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg" id="mobile-menu">
+<div class="flex flex-col space-y-4">
+<a class="text-green-700 hover:text-green-600 font-medium" href="index.html" onclick="showPage('home')">Home</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="about.html" onclick="showPage('about')">About Uganda</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="destinations.html" onclick="showPage('destinations')">Destinations</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="plan-trip.html" onclick="showPage('plan')">Plan Your Trip</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="events.html" onclick="showPage('events')">Events</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="blog.html" onclick="showPage('blog')">Blog</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="contact.html" onclick="showPage('contact')">Contact</a>
+</div>
+</div>
+</header>
+<!-- Destinations Section -->
+<section class="parallax py-32 px-4 text-center text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Img/kampala-city-night.jpg');">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Uganda's Top Destinations</h2>
+<p class="text-xl mb-8">From majestic wildlife to stunning landscapes, discover Uganda's most breathtaking places</p>
+</div>
+</section>
+<!-- Destinations Page -->
+<div class="page block" id="destinations">
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="mb-16">
+<h2 class="text-3xl font-bold text-green-800 mb-8 text-center">National Parks</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Bwindi -->
+<div class="destination-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+<img alt="Bwindi Impenetrable Forest" class="w-full h-64 object-cover" src="Img/bwindi-impenetrable-national-park.jpg"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-green-800 mb-2">Bwindi Impenetrable National Park</h3>
+<p class="text-gray-600 mb-4">Home to nearly half of the world's remaining mountain gorillas, this UNESCO World Heritage Site offers unforgettable gorilla trekking experiences.</p>
+<div class="flex justify-between items-center">
+<span class="text-green-600 font-medium">Southwestern Uganda</span>
+<a class="text-green-600 font-medium hover:underline" href="https://www.ugandawildlife.org/explore-our-parks/parks/bwindi-impenetrable-national-park">Explore →</a>
+</div>
+</div>
+</div>
+<!-- Murchison Falls -->
+<div class="destination-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+<img alt="Murchison Falls" class="w-full h-64 object-cover" src="Img/murchison-falls-national-park.jpg"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-green-800 mb-2">Murchison Falls National Park</h3>
+<p class="text-gray-600 mb-4">Witness the Nile River forced through a narrow gorge before plunging 43 meters, creating one of Africa's most powerful waterfalls.</p>
+<div class="flex justify-between items-center">
+<span class="text-green-600 font-medium">Northwestern Uganda</span>
+<a class="text-green-600 font-medium hover:underline" href="https://www.ugandawildlife.org/explore-our-parks/parks/murchison-falls-national-park">Explore →</a>
+</div>
+</div>
+</div>
+<!-- Queen Elizabeth -->
+<div class="destination-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+<img alt="Queen Elizabeth National Park" class="w-full h-64 object-cover" src="Img/queen-elizabeth-national-park.jpg"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-green-800 mb-2">Queen Elizabeth National Park</h3>
+<p class="text-gray-600 mb-4">Famous for its tree-climbing lions and diverse ecosystems, this park offers incredible wildlife viewing and scenic boat cruises.</p>
+<div class="flex justify-between items-center">
+<span class="text-green-600 font-medium">Western Uganda</span>
+<a class="text-green-600 font-medium hover:underline" href="https://www.ugandawildlife.org/explore-our-parks/parks/queen-elizabeth-national-park">Explore →</a>
+</div>
+</div>
+</div>
+<!-- Kidepo -->
+<div class="destination-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+<img alt="Kidepo Valley" class="w-full h-64 object-cover" src="Img/kidepo-valley-national-park.jpg"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-green-800 mb-2">Kidepo Valley National Park</h3>
+<p class="text-gray-600 mb-4">Uganda's most remote park offers stunning savannah landscapes teeming with wildlife, with few visitors to share the experience with.</p>
+<div class="flex justify-between items-center">
+<span class="text-green-600 font-medium">Northeastern Uganda</span>
+<a class="text-green-600 font-medium hover:underline" href="https://www.ugandawildlife.org/explore-our-parks/parks/kidepo-valley-national-park">Explore →</a>
+</div>
+</div>
+</div>
+<!-- Rwenzori -->
+<div class="destination-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+<img alt="Rwenzori Mountains" class="w-full h-64 object-cover" src="Img/rwenzori-mountains-national-park.jpg"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-green-800 mb-2">Rwenzori Mountains National Park</h3>
+<p class="text-gray-600 mb-4">Home to Africa's third highest peak, these "Mountains of the Moon" offer spectacular hiking through otherworldly landscapes.</p>
+<div class="flex justify-between items-center">
+<span class="text-green-600 font-medium">Western Uganda</span>
+<a class="text-green-600 font-medium hover:underline" href="https://www.ugandawildlife.org/explore-our-parks/parks/rwenzori-mountains-national-park">Explore →</a>
+</div>
+</div>
+</div>
+<!-- Lake Mburo -->
+<div class="destination-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+<img alt="Lake Mburo" class="w-full h-64 object-cover" src="Img/lake-mburo-national-park.jpg"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-green-800 mb-2">Lake Mburo National Park</h3>
+<p class="text-gray-600 mb-4">The perfect park for a short safari, easily accessible from Kampala with excellent wildlife viewing and boat trips on the lake.</p>
+<div class="flex justify-between items-center">
+<span class="text-green-600 font-medium">Western Uganda</span>
+<a class="text-green-600 font-medium hover:underline" href="https://www.ugandawildlife.org/explore-our-parks/parks/lake-mburo-national-park">Explore →</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-16">
+<h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Cities &amp; Cultural Sites</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Kampala -->
+<div class="destination-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+<img alt="Kampala" class="w-full h-64 object-cover" src="Img/city-day.jpg"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-green-800 mb-2">Kampala</h3>
+<p class="text-gray-600 mb-4">Uganda's vibrant capital city offers a mix of modern amenities and traditional culture, with bustling markets, historical sites, and lively nightlife.</p>
+<div class="flex justify-between items-center">
+<span class="text-green-600 font-medium">Central Uganda</span>
+<a class="text-green-600 font-medium hover:underline" href="https://www.visituganda.com/destinations/kampala">Explore →</a>
+</div>
+</div>
+</div>
+<!-- Jinja -->
+<div class="destination-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+<img alt="Jinja" class="w-full h-64 object-cover" src="/Img/jinja-source-of-the-nile.jpg"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-green-800 mb-2">Jinja - Source of the Nile</h3>
+<p class="text-gray-600 mb-4">Visit where the Nile River begins its journey northward, and enjoy adventure activities like white-water rafting and bungee jumping.</p>
+<div class="flex justify-between items-center">
+<span class="text-green-600 font-medium">Eastern Uganda</span>
+<a class="text-green-600 font-medium hover:underline" href="https://www.visituganda.com/destinations/jinja">Explore →</a>
+</div>
+</div>
+</div>
+<!-- Fort Portal -->
+<div class="destination-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+<img alt="Fort Portal" class="w-full h-64 object-cover" src="Img/fort-portal.jpg"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-green-800 mb-2">Fort Portal</h3>
+<p class="text-gray-600 mb-4">A charming town surrounded by crater lakes and tea plantations, serving as the gateway to the Rwenzori Mountains and several national parks.</p>
+<div class="flex justify-between items-center">
+<span class="text-green-600 font-medium">Western Uganda</span>
+<a class="text-green-600 font-medium hover:underline" href="https://www.visituganda.com/destinations/fort-portal">Explore →</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-16">
+<h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Lakes &amp; Waterfalls</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Lake Victoria -->
+<div class="destination-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+<img alt="Lake Victoria" class="w-full h-64 object-cover" src="/Img/lake-victoria.webp"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-green-800 mb-2">Lake Victoria</h3>
+<p class="text-gray-600 mb-4">Africa's largest lake offers beautiful islands, fishing villages, and opportunities for birdwatching, boat trips, and relaxation.</p>
+<div class="flex justify-between items-center">
+<span class="text-green-600 font-medium">Southern Uganda</span>
+<a class="text-green-600 font-medium hover:underline" href="https://www.visituganda.com/destinations/lake-victoria">Explore →</a>
+</div>
+</div>
+</div>
+<!-- Sipi Falls -->
+<div class="destination-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+<img alt="Sipi Falls" class="w-full h-64 object-cover" src="Img/sipi-falls.jpg"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-green-800 mb-2">Sipi Falls</h3>
+<p class="text-gray-600 mb-4">A series of three stunning waterfalls on the slopes of Mount Elgon, perfect for hiking, abseiling, and enjoying breathtaking views.</p>
+<div class="flex justify-between items-center">
+<span class="text-green-600 font-medium">Eastern Uganda</span>
+<a class="text-green-600 font-medium hover:underline" href="https://www.visituganda.com/destinations/sipi-falls">Explore →</a>
+</div>
+</div>
+</div>
+<!-- Lake Bunyonyi -->
+<div class="destination-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+<img alt="Lake Bunyonyi" class="w-full h-64 object-cover" src="Img/gift.jpg"/>
+<div class="p-6">
+<h3 class="text-xl font-bold text-green-800 mb-2">Lake Bunyonyi</h3>
+<p class="text-gray-600 mb-4">Uganda's deepest lake is surrounded by terraced hills and dotted with islands, offering a peaceful retreat and stunning scenery.</p>
+<div class="flex justify-between items-center">
+<span class="text-green-600 font-medium">Southwestern Uganda</span>
+<a class="text-green-600 font-medium hover:underline" href="https://www.visituganda.com/destinations/lake-bunyonyi">Explore →</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center">
+<button class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105" onclick="window.location.href='plan-trip.html'">
+                        Plan Your Trip to Uganda
+                    </button>
+</div>
+</div>
+</section>
+</div>
+
+<script>
+  var menuBtn = document.getElementById('mobile-menu-button');
+  var mobileMenu = document.getElementById('mobile-menu');
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>
+</body>
+</html>
