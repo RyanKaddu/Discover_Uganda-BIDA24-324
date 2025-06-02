@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Discover Uganda - The Pearl of Africa</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="style.css" rel="stylesheet"/>
+<style>
+</style>
+</head>
+<body class="font-sans bg-gray-50">
+<!-- Header/Navigation -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<div class="flex items-center cursor-pointer" onclick="showPage('home')">
+<img alt="Uganda Logo" class="h-10 mr-3" src="Img/logo.png"/>
+<h1 class="text-xl font-bold text-green-800">DISCOVER UGANDA</h1>
+</div>
+<nav class="hidden md:flex space-x-2">
+<a class="nav-tab text-green-700 hover:text-green-600 font-medium active" href="index.html" onclick="showPage('home')">Home</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="about.html" onclick="showPage('about')">About Uganda</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="destinations.html" onclick="showPage('destinations')">Destinations</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="plan-trip.html" onclick="showPage('plan')">Plan Your Trip</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="events.html" onclick="showPage('events')">Events</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="blog.html" onclick="showPage('blog')">Blog</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="contact.html" onclick="showPage('contact')">Contact</a>
+</nav>
+<button class="md:hidden text-gray-600" id="mobile-menu-button">
+<i class="fas fa-bars text-2xl"></i>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg" id="mobile-menu">
+<div class="flex flex-col space-y-4">
+<a class="text-green-700 hover:text-green-600 font-medium" href="index.html" onclick="showPage('home')">Home</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="about.html" onclick="showPage('about')">About Uganda</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="destinations.html" onclick="showPage('destinations')">Destinations</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="plan-trip.html" onclick="showPage('plan')">Plan Your Trip</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="events.html" onclick="showPage('events')">Events</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="blog.html" onclick="showPage('blog')">Blog</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="contact.html" onclick="showPage('contact')">Contact</a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-96 flex items-center justify-center text-white parallax" style="background-image: url('/Img/kampala-city-night.jpg');">
+<div class="absolute inset-0 bg-black bg-opacity-50"></div>
+<div class="relative z-10 text-center px-4">
+<h1 class="text-4xl md:text-5xl font-bold mb-4">Plan Your Ugandan Adventure</h1>
+<p class="text-xl mb-8">Customize your perfect journey through the Pearl of Africa</p>
+<a class="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold py-3 px-6 rounded-full transition duration-300 inline-block" href="#trip-planner">
+                Start Planning <i class="fas fa-arrow-down ml-2"></i>
+</a>
+</div>
+</section>
+<!-- Trip Planner Section -->
+<section class="py-16 bg-white" id="trip-planner">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center text-green-800 mb-12">Build Your Dream Itinerary</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Left Column - Trip Form -->
+<div class="md:col-span-2 bg-gray-50 p-8 rounded-xl shadow-md">
+<form id="tripForm">
+<!-- Step 1: Basic Info -->
+<div class="mb-10">
+<h3 class="text-xl font-semibold text-green-700 mb-4 flex items-center">
+<span class="bg-green-700 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">1</span>
+                                Trip Basics
+                            </h3>
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label class="block text-gray-700 mb-2" for="tripName">Trip Name</label>
+<input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" id="tripName" placeholder="e.g. Gorilla Trekking Adventure" type="text"/>
+</div>
+<div>
+<label class="block text-gray-700 mb-2" for="travelDates">Travel Dates</label>
+<input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" id="travelDates" onfocus="(this.type='date')" placeholder="Select dates" type="text"/>
+</div>
+<div>
+<label class="block text-gray-700 mb-2" for="travelers">Number of Travelers</label>
+<select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" id="travelers">
+<option value="1">1 Traveler</option>
+<option value="2">2 Travelers</option>
+<option value="3">3 Travelers</option>
+<option value="4">4 Travelers</option>
+<option value="5+">5+ Travelers</option>
+</select>
+</div>
+<div>
+<label class="block text-gray-700 mb-2" for="tripType">Trip Type</label>
+<select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" id="tripType">
+<option value="adventure">Adventure</option>
+<option value="wildlife">Wildlife Safari</option>
+<option value="cultural">Cultural Experience</option>
+<option value="relaxation">Relaxation</option>
+<option value="family">Family Vacation</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Step 2: Destinations -->
+<div class="mb-10">
+<h3 class="text-xl font-semibold text-green-700 mb-4 flex items-center">
+<span class="bg-green-700 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">2</span>
+                                Select Destinations
+                            </h3>
+<p class="text-gray-600 mb-4">Choose the places you'd like to visit (select at least one):</p>
+<div class="grid md:grid-cols-2 gap-4">
+<div class="flex items-center">
+<input class="custom-checkbox mr-3" id="bwindi" type="checkbox"/>
+<label class="text-gray-700 cursor-pointer" for="bwindi">Bwindi Impenetrable Forest (Gorilla Trekking)</label>
+</div>
+<div class="flex items-center">
+<input class="custom-checkbox mr-3" id="queen" type="checkbox"/>
+<label class="text-gray-700 cursor-pointer" for="queen">Queen Elizabeth National Park</label>
+</div>
+<div class="flex items-center">
+<input class="custom-checkbox mr-3" id="murchison" type="checkbox"/>
+<label class="text-gray-700 cursor-pointer" for="murchison">Murchison Falls National Park</label>
+</div>
+<div class="flex items-center">
+<input class="custom-checkbox mr-3" id="kibale" type="checkbox"/>
+<label class="text-gray-700 cursor-pointer" for="kibale">Kibale Forest (Chimpanzee Tracking)</label>
+</div>
+<div class="flex items-center">
+<input class="custom-checkbox mr-3" id="rwenzori" type="checkbox"/>
+<label class="text-gray-700 cursor-pointer" for="rwenzori">Rwenzori Mountains</label>
+</div>
+<div class="flex items-center">
+<input class="custom-checkbox mr-3" id="kampala" type="checkbox"/>
+<label class="text-gray-700 cursor-pointer" for="kampala">Kampala City Tour</label>
+</div>
+<div class="flex items-center">
+<input class="custom-checkbox mr-3" id="lake" type="checkbox"/>
+<label class="text-gray-700 cursor-pointer" for="lake">Lake Bunyonyi</label>
+</div>
+<div class="flex items-center">
+<input class="custom-checkbox mr-3" id="kidepo" type="checkbox"/>
+<label class="text-gray-700 cursor-pointer" for="kidepo">Kidepo Valley National Park</label>
+</div>
+</div>
+</div>
+<!-- Step 3: Activities -->
+<div class="mb-10">
+<h3 class="text-xl font-semibold text-green-700 mb-4 flex items-center">
+<span class="bg-green-700 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">3</span>
+                                Preferred Activities
+                            </h3>
+<p class="text-gray-600 mb-4">What experiences are you most interested in?</p>
+<div class="flex flex-wrap gap-3">
+<button class="activity-btn px-4 py-2 border border-yellow-500 rounded-full text-gray-700 hover:bg-yellow-500 hover:text-white transition" data-activity="wildlife" type="button">Wildlife Safaris</button>
+<button class="activity-btn px-4 py-2 border border-yellow-500 rounded-full text-gray-700 hover:bg-yellow-500 hover:text-white transition" data-activity="gorilla" type="button">Gorilla Trekking</button>
+<button class="activity-btn px-4 py-2 border border-yellow-500 rounded-full text-gray-700 hover:bg-yellow-500 hover:text-white transition" data-activity="hiking" type="button">Mountain Hiking</button>
+<button class="activity-btn px-4 py-2 border border-yellow-500 rounded-full text-gray-700 hover:bg-yellow-500 hover:text-white transition" data-activity="cultural" type="button">Cultural Tours</button>
+<button class="activity-btn px-4 py-2 border border-yellow-500 rounded-full text-gray-700 hover:bg-yellow-500 hover:text-white transition" data-activity="bird" type="button">Bird Watching</button>
+<button class="activity-btn px-4 py-2 border border-yellow-500 rounded-full text-gray-700 hover:bg-yellow-500 hover:text-white transition" data-activity="water" type="button">Water Activities</button>
+<button class="activity-btn px-4 py-2 border border-yellow-500 rounded-full text-gray-700 hover:bg-yellow-500 hover:text-white transition" data-activity="adventure" type="button">Adventure Sports</button>
+<button class="activity-btn px-4 py-2 border border-yellow-500 rounded-full text-gray-700 hover:bg-yellow-500 hover:text-white transition" data-activity="relaxation" type="button">Relaxation</button>
+</div>
+<input id="selectedActivities" type="hidden"/>
+</div>
+<!-- Step 4: Budget -->
+<div class="mb-10">
+<h3 class="text-xl font-semibold text-green-700 mb-4 flex items-center">
+<span class="bg-green-700 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">4</span>
+                                Budget Range
+                            </h3>
+<div class="mb-4">
+<label class="block text-gray-700 mb-2" for="budgetSlider">Estimated Budget per Person (USD): <span id="budgetValue">$1,500</span></label>
+<input class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" id="budgetSlider" max="10000" min="500" step="500" type="range" value="1500"/>
+<div class="flex justify-between text-xs text-gray-500 mt-1">
+<span>$500</span>
+<span>$2,500</span>
+<span>$5,000</span>
+<span>$7,500</span>
+<span>$10,000+</span>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-4">
+<div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+<h4 class="font-semibold text-yellow-700 mb-2">Budget</h4>
+<p class="text-sm text-gray-600">$500 - $1,500 per person</p>
+</div>
+<div class="bg-green-50 p-4 rounded-lg border border-green-200">
+<h4 class="font-semibold text-green-700 mb-2">Mid-Range</h4>
+<p class="text-sm text-gray-600">$1,500 - $4,000 per person</p>
+</div>
+<div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
+<h4 class="font-semibold text-purple-700 mb-2">Luxury</h4>
+<p class="text-sm text-gray-600">$4,000+ per person</p>
+</div>
+</div>
+</div>
+<!-- Step 5: Accommodation -->
+<div class="mb-10">
+<h3 class="text-xl font-semibold text-green-700 mb-4 flex items-center">
+<span class="bg-green-700 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">5</span>
+                                Accommodation Preferences
+                            </h3>
+<div class="grid md:grid-cols-3 gap-4">
+<label class="accommodation-option cursor-pointer">
+<input class="hidden peer" name="accommodation" type="radio" value="budget"/>
+<div class="p-4 border-2 border-gray-200 rounded-lg peer-checked:border-yellow-500 peer-checked:bg-yellow-50 transition">
+<i class="fas fa-campground text-2xl text-gray-600 mb-2"></i>
+<h4 class="font-semibold">Budget</h4>
+<p class="text-sm text-gray-600">Camping, hostels, basic lodges</p>
+</div>
+</label>
+<label class="accommodation-option cursor-pointer">
+<input checked="" class="hidden peer" name="accommodation" type="radio" value="midrange"/>
+<div class="p-4 border-2 border-gray-200 rounded-lg peer-checked:border-yellow-500 peer-checked:bg-yellow-50 transition">
+<i class="fas fa-hotel text-2xl text-gray-600 mb-2"></i>
+<h4 class="font-semibold">Mid-Range</h4>
+<p class="text-sm text-gray-600">Comfortable hotels and lodges</p>
+</div>
+</label>
+<label class="accommodation-option cursor-pointer">
+<input class="hidden peer" name="accommodation" type="radio" value="luxury"/>
+<div class="p-4 border-2 border-gray-200 rounded-lg peer-checked:border-yellow-500 peer-checked:bg-yellow-50 transition">
+<i class="fas fa-spa text-2xl text-gray-600 mb-2"></i>
+<h4 class="font-semibold">Luxury</h4>
+<p class="text-sm text-gray-600">High-end resorts and boutique lodges</p>
+</div>
+</label>
+</div>
+</div>
+</form></div></div></div></section>
+<script>
+  var menuBtn = document.getElementById('mobile-menu-button');
+  var mobileMenu = document.getElementById('mobile-menu');
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>
+</body>
+</html>
