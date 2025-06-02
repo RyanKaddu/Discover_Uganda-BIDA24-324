@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Discover Uganda - The Pearl of Africa</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<!-- Header/Navigation -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<div class="flex items-center cursor-pointer" onclick="showPage('home')">
+<img alt="Uganda Logo" class="h-10 mr-3" src="Img/logo.png"/>
+<h1 class="text-xl font-bold text-green-800">DISCOVER UGANDA</h1>
+</div>
+<nav class="hidden md:flex space-x-2">
+<a class="nav-tab text-green-700 hover:text-green-600 font-medium active" href="index.html" onclick="showPage('home')">Home</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="about.html" onclick="showPage('about')">About Uganda</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="destinations.html" onclick="showPage('destinations')">Destinations</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="plan-trip.html" onclick="showPage('plan')">Plan Your Trip</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="events.html" onclick="showPage('events')">Events</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="blog.html" onclick="showPage('blog')">Blog</a>
+<a class="nav-tab text-gray-600 hover:text-green-600 font-medium" href="contact.html" onclick="showPage('contact')">Contact</a>
+</nav>
+<button class="md:hidden text-gray-600" id="mobile-menu-button">
+<i class="fas fa-bars text-2xl"></i>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg" id="mobile-menu">
+<div class="flex flex-col space-y-4">
+<a class="text-green-700 hover:text-green-600 font-medium" href="index.html" onclick="showPage('home')">Home</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="about.html" onclick="showPage('about')">About Uganda</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="destinations.html" onclick="showPage('destinations')">Destinations</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="plan-trip.html" onclick="showPage('plan')">Plan Your Trip</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="events.html" onclick="showPage('events')">Events</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="blog.html" onclick="showPage('blog')">Blog</a>
+<a class="text-gray-600 hover:text-green-600 font-medium" href="contact.html" onclick="showPage('contact')">Contact</a>
+</div>
+</div>
+</header>
+<body class="font-sans bg-gray-50">
+<!-- Hero Section -->
+<section class="relative h-96 bg-cover bg-center" style="background-image: url('Img/kampala-city-night.jpg');">
+<div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+<div class="text-center text-white px-4">
+<h2 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">Contact Us</h2>
+<p class="text-xl md:text-2xl max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s;">Let's plan your unforgettable Ugandan adventure together</p>
+</div>
+</div>
+</section>
+<!-- Contact Information Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Get In Touch</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Contact Card 1 -->
+<div class="contact-card bg-gray-50 p-8 rounded-lg shadow-md transition duration-300">
+<div class="text-center">
+<div class="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+<i class="fas fa-map-marker-alt text-green-600 text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Our Office</h3>
+<p class="text-gray-600">Plot 24, Kampala Road<br/>Kampala, Uganda</p>
+</div>
+</div>
+<!-- Contact Card 2 -->
+<div class="contact-card bg-gray-50 p-8 rounded-lg shadow-md transition duration-300">
+<div class="text-center">
+<div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+<i class="fas fa-phone-alt text-blue-600 text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Call Us</h3>
+<p class="text-gray-600">+256 700 123456<br/>+256 312 123456</p>
+</div>
+</div>
+<!-- Contact Card 3 -->
+<div class="contact-card bg-gray-50 p-8 rounded-lg shadow-md transition duration-300">
+<div class="text-center">
+<div class="bg-yellow-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+<i class="fas fa-envelope text-yellow-600 text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Email Us</h3>
+<p class="text-gray-600">info@discoveringuganda.com<br/>bookings@discoveringuganda.com</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+<div class="md:flex">
+<!-- Form Column -->
+<div class="w-full md:w-1/2 p-8">
+<h2 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
+<form class="space-y-4" id="contactForm">
+<div>
+<label class="block text-gray-700 mb-2" for="name">Full Name</label>
+<input class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" id="name" name="name" required="" type="text"/>
+</div>
+<div>
+<label class="block text-gray-700 mb-2" for="email">Email Address</label>
+<input class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" id="email" name="email" required="" type="email"/>
+</div>
+<div>
+<label class="block text-gray-700 mb-2" for="phone">Phone Number</label>
+<input class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" id="phone" name="phone" type="tel"/>
+</div>
+<div>
+<label class="block text-gray-700 mb-2" for="subject">Subject</label>
+<select class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" id="subject" name="subject">
+<option value="general">General Inquiry</option>
+<option value="booking">Tour Booking</option>
+<option value="custom">Custom Tour Request</option>
+<option value="feedback">Feedback</option>
+<option value="other">Other</option>
+</select>
+</div>
+<div>
+<label class="block text-gray-700 mb-2" for="message">Your Message</label>
+<textarea class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" id="message" name="message" required="" rows="4"></textarea>
+</div>
+<button class="submit-btn w-full bg-indigo-600 text-white py-3 px-4 rounded-md hover:bg-indigo-700 transition duration-300 font-medium" type="submit">
+                                Send Message
+                            </button>
+</form>
+</div>
+<!-- Image Column -->
+<div class="hidden md:block md:w-1/2 bg-cover bg-center" style="background-image: url('Img/contact.webp');">
+<div class="h-full bg-gradient-to-t from-black to-transparent opacity-90 flex items-end p-8">
+<div class="text-white">
+<h3 class="text-2xl font-bold mb-2">Experience Uganda</h3>
+<p class="mb-4">From the source of the Nile to the mountain gorillas, let us help you discover the Pearl of Africa.</p>
+<div class="flex space-x-4">
+<a class="text-white hover:text-yellow-300" href="#"><i class="fab fa-facebook-f"></i></a>
+<a class="text-white hover:text-yellow-300" href="#"><i class="fab fa-twitter"></i></a>
+<a class="text-white hover:text-yellow-300" href="#"><i class="fab fa-instagram"></i></a>
+<a class="text-white hover:text-yellow-300" href="#"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+  var menuBtn = document.getElementById('mobile-menu-button');
+  var mobileMenu = document.getElementById('mobile-menu');
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>
+</body>
+</html>
